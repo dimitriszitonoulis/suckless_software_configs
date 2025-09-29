@@ -2,7 +2,7 @@
 #include <X11/XF86keysym.h> /* to read XF86 codes for keys*/
 
 // Applied patches
-// dwm-statuscmd-20210405-67d76bd.diff --- execeute commands when status bar is clicked (for dwmblocks)
+// dwm-statuscmd-20210405-67d76bd.diff --- execute commands when status bar is clicked (for dwmblocks)
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -123,7 +123,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_q,      			quit,           {0} },
 
   // Creating a command array when sending multiple shell commands does not work
-  // beacuse of spawn (calls execvp which does not understand: ;)
+  // because of spawn (calls execvp which does not understand: ;)
   // call SHCMD() insted
   /* volume keys */
 	{ 0,                      XF86XK_AudioRaiseVolume,	    spawn,      SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+; pkill -RTMIN+6 dwmblocks") },
@@ -140,6 +140,8 @@ static const Key keys[] = {
   { MODKEY,				          XK_Print,		                  spawn,		  SHCMD("flameshot gui -c -p ~/Pictures/Screenshots") },
   /* cycle through battery modes */
   // alt + shift
+  // it does nothing now,
+  // the script only changes when the according block is clicked on the status bar
   {Mod1Mask|ShiftMask,        XK_b,                         spawn,      {.v = chg_bat_mode }},
   /* player keys */
 	{ 0,                      XF86XK_AudioPlay,	            spawn,      SHCMD("playerctl play") },
