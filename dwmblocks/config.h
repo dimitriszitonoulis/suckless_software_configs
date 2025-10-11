@@ -3,11 +3,11 @@
 static const Block blocks[] = {
     /*Icon*/ /*Command*/ /*Update Interval*/ /*Update Signal*/
 
-    {"", "$HOME/topbar_scripts/volume_script", 0, 6},
-    {"", "$HOME/topbar_scripts/brightness_script", 0, 5},
-    {"", "$HOME/topbar_scripts/wifi_bars", 5, 0},
-    {"", "$HOME/topbar_scripts/battery_percentage", 5, 0},
-    {"", "$HOME/topbar_scripts/battery_power/bat_script", 0, 4},
+    {"", "$HOME/suckless/scripts/volume_script.sh", 0, 6},
+    {"", "$HOME/suckless/scripts/brightness_script.sh", 0, 5},
+    {"", "$HOME/suckless/scripts/wifi_bars.sh", 5, 0},
+    {"", "$HOME/suckless/scripts/battery_percentage.sh", 5, 0},
+    {"", "$HOME/suckless/scripts/bat_script.sh", 0, 4},
     {"  ", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g", 30, 0},
 
     //{"",      "date '+%b %d (%a) %I:%M%p'", 5, 0},
