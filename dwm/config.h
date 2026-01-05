@@ -155,7 +155,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,       XK_s,	                        spawn,      { .v = (const char*[]) {MUSIC_PLAYER, NULL} } },
 	{ MODKEY|ShiftMask,       XK_d,	                        spawn,      { .v = (const char*[]) {"discord", NULL} } },
 	{ MODKEY|ShiftMask,       XK_b,	                        spawn,      { .v = (const char*[]) { TERMINAL, "-e", "bluetui", NULL} } },
-	{ ControlMask|ShiftMask,  XK_Escape,	                  spawn,      { .v = (const char*[]) { TERMINAL, "-e", "htop", NULL} } },
+	{ ControlMask|ShiftMask,  XK_Escape,	                  spawn,      { .v = (const char*[]) { TERMINAL, "-e", "btop", NULL} } },
 
 
 
