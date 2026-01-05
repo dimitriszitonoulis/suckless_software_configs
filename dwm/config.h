@@ -157,6 +157,10 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,       XK_b,	                        spawn,      { .v = (const char*[]) { TERMINAL, "-e", "bluetui", NULL} } },
 	{ ControlMask|ShiftMask,  XK_Escape,	                  spawn,      { .v = (const char*[]) { TERMINAL, "-e", "btop", NULL} } },
 
+  /* power state bindings */
+  { MODKEY|Mod1Mask,        XK_s,                          spawn,      SHCMD("systemctl suspend") },
+  { MODKEY|Mod1Mask,        XK_r,                          spawn,      SHCMD("reboot") },
+  { MODKEY|Mod1Mask,        XK_p,                          spawn,      SHCMD("poweroff") },
 
 
 
