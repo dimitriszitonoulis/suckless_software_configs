@@ -71,6 +71,7 @@ static const Layout layouts[] = {
 #define TERMINAL "kitty"
 #define BROWSER "firefox"
 #define MUSIC_PLAYER "spotify-launcher"
+#define FILE_EXPLORER "dolphin"
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
@@ -150,6 +151,7 @@ static const Key keys[] = {
 	{ 0,                      XF86XK_AudioPrev,	            spawn,      SHCMD("playerctl previous") },
   /* app bindings */
 	{ MODKEY|ShiftMask,       XK_w,	                        spawn,      { .v = (const char*[]) {BROWSER, NULL} } },
+	{ MODKEY|ShiftMask,       XK_e,	                        spawn,      { .v = (const char*[]) {FILE_EXPLORER, NULL} } },
 	{ MODKEY|ShiftMask,       XK_s,	                        spawn,      { .v = (const char*[]) {MUSIC_PLAYER, NULL} } },
 	{ MODKEY|ShiftMask,       XK_d,	                        spawn,      { .v = (const char*[]) {"discord", NULL} } },
 	{ MODKEY|ShiftMask,       XK_b,	                        spawn,      { .v = (const char*[]) { TERMINAL, "-e", "bluetui", NULL} } },
