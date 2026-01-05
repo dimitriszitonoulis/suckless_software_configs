@@ -80,8 +80,6 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { TERMINAL, NULL };
 static const char *inc_refreshrate[] = {"xrandr", "--output", "eDP-1", "--mode", "1920x1080", "--rate", "144.03"};
 static const char *dec_refreshrate[] = {"xrandr", "--output", "eDP-1", "--mode", "1920x1080", "--rate", "60.01"};
-/* command to cycle through battery modes */
-static const char *chg_bat_mode[] = {"pkill", "-RTMIN+4", "dwmblocks"};
 /* command to toggle between languages */
 //static const char *change_keyboard[] = { "setxkbmap", "-layout", "us, gr", "-option", "grp:toggle", NULL };
 //static const char *change_keyboard[] = { "setxkbmap", "-layout", "us,gr", "-option", "grp:toggle", NULL };
@@ -139,11 +137,6 @@ static const Key keys[] = {
   /* For screenshots */
   { 0,				              XK_Print,		                  spawn,		  SHCMD("flameshot screen -c -p ~/Pictures/Screenshots") },
   { MODKEY,				          XK_Print,		                  spawn,		  SHCMD("flameshot gui -c -p ~/Pictures/Screenshots") },
-  /* cycle through battery modes */
-  // alt + shift
-  // it does nothing now,
-  // the script only changes when the according block is clicked on the status bar
-  {Mod1Mask|ShiftMask,        XK_b,                         spawn,      {.v = chg_bat_mode }},
   /* player keys */
 	{ 0,                      XF86XK_AudioPlay,	            spawn,      SHCMD("playerctl play") },
 	{ 0,                      XF86XK_AudioPause,	          spawn,      SHCMD("playerctl stop") },
