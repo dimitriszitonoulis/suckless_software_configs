@@ -3,6 +3,9 @@
 ## Description
 
 Modular status bar for dwm written in c.
+This vesion is based on [Luke Smith's dwmblocks](https://github.com/LukeSmithxyz/dwmblocks).
+The clickable blocks of that version does not work with dwm-6.5
+so I modified the source code to make it work.
 
 ## Modifying blocks
 
@@ -11,14 +14,16 @@ Blocks are added and removed by editing the config.h header file.
 
 ## My build
 
-dwmblocks uses my custom scripts which can be found in my
-[scripts](https://github.com/dimitriszitonoulis/scripts.git) repository.
-
-## My modifications
+### Source code modifications
 
 Modified the `sighandler()` for dwm-6.5.
 In this version dwm does not send `SIGUR1` signals to dwmblocks.
 It sends `SIGRTMIN+n` signals.
+
+### Custom scripts
+
+dwmblocks uses my custom scripts which can be found in my
+[scripts](https://github.com/dimitriszitonoulis/scripts.git) repository.
 
 ## Signaling changes
 
