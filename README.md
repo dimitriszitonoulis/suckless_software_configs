@@ -104,7 +104,7 @@ if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
 fi
 ```
 
-Edit `.xitinirc` to include dwm and dwmblocks
+Edit `.xinitrc` to include dwm and dwmblocks
 
 Example `.xinitrc`:
 
