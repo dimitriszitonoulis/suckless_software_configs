@@ -4,13 +4,17 @@
 
 In this repository are my configs for suckless apps dwm, dmenu and dwmblocks
 as well as the original version of dwm (dwm-6.5) on which I built my config.
-Check the [dwm site]() [dmenu]() for more info on dwm and dmenu
-For more information about suckless apps check the official [suckless website](https://suckless.org/).
+For more info on dwm and dmenu check [dwm site](https://dwm.suckless.org/) 
+and [dmenu site](https://tools.suckless.org/dmenu/) for more info on dwm and dmenu
+check [dwm site](https://dwm.suckless.org/)
+and [dmenu site](https://tools.suckless.org/dmenu/).
+For more information about suckless apps in general
+check the official [suckless website](https://suckless.org/).
 
 dwmblocks is a status bar for dwm.
 The vesion I use is based on [Luke Smith's dwmblocks](https://github.com/LukeSmithxyz/dwmblocks)
 however the clickable blocks do not work with dwm-6.5.
-I modified the dwmblocks source code to work with dwm-6.5
+I modified the source code to work with dwm-6.5
 (check the [README in dwmblocks directory](/dwmblocks/README.md)).
 
 ## Assumptions
@@ -60,14 +64,12 @@ wireplumber
 
 ### With my config
 
-**Make sure that `kitty` is installed**.
-
 The config of dwm contains the name of the terminal emulator to be run.
-I chose `kitty`.
-
-**ATTENTION**:
-If the terminal emulator (`kitty`) is not installed then no
+The default is `st`, I changed it to `kitty`.
+If `kitty` is not installed then no
 terminal can be launched => no packages can be installed => installation is unusable.
+So, either install `kitty` or modify the `dwm/config.h` to use
+your terminal emulator.
 
 #### Install
 
@@ -92,7 +94,7 @@ sudo make clean install
 
 #### Run on system start
 
-Edit your shell's profile file to include the following.
+Edit your shell's profile file to execute `startx` on startup.
 I use zsh so I add the following to `.zprofile`
 
 ```bash
@@ -104,7 +106,7 @@ fi
 
 Edit `.xitinirc` to include dwm and dwmblocks
 
-An example `.xinitrc`:
+Example `.xinitrc`:
 
 ```bash
 # kill existing instances of dwmblocks
@@ -122,10 +124,5 @@ You can copy my `.xinitrc` from my
 
 #### dwmblocks
 
-dwmblocks uses some of my custom scripts. For more info check
-the [README in dwmblocks directory](/dwmblocks/README.md).
-
-### With the original
-
-Do not forget to change terminal emulator to the one you have installed
-or download st
+dwmblocks uses some of my custom scripts.
+For more info check the [README in dwmblocks directory](/dwmblocks/README.md).
